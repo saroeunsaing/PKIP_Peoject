@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.33027.164
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "PKIP_PROJECT_WPFAPP", "PKIP_PROJECT_WPFAPP.vbproj", "{FDBEAC1F-4324-4C55-95DF-6A26854A18CB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FDBEAC1F-4324-4C55-95DF-6A26854A18CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FDBEAC1F-4324-4C55-95DF-6A26854A18CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FDBEAC1F-4324-4C55-95DF-6A26854A18CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FDBEAC1F-4324-4C55-95DF-6A26854A18CB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {87042DF6-6760-4D93-A9E6-E7E2AF88C159}
+	EndGlobalSection
+EndGlobal
