@@ -4,9 +4,58 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PKIP_PROJECT_WPFAPP"
-        mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+        mc:Ignorable="d" Name="dashboard"
+        Title="MainWindow" Height="800" Width="1200"
+        WindowStartupLocation="CenterScreen" WindowStyle="None"
+        Background="Transparent" AllowsTransparency="True"
+        ResizeMode="NoResize" WindowState="Normal">
+
+    <Border CornerRadius="10" Background="{DynamicResource PrimaryBackgroundColor}">
+        <Grid >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <!-- Menu Left Side bar-->
+            <Border CornerRadius="10 0 0 10" Background="{DynamicResource SecundaryBackgroundColor}">
+                <Grid x:Name="gridMenu" Width="300">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="60" />
+                        <RowDefinition Height="60" />
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <!--Logo of menu-->
+                    <StackPanel Grid.Row="1" Orientation="Horizontal" VerticalAlignment="Top">
+                        <Path Data="{DynamicResource logo}" Margin="5 0 0 0" Stretch="Fill" Fill="{DynamicResource PrimaryBlueColor}" Width="60
+                              " />
+                        <Label Content="Orizon" Foreground="{DynamicResource PrimaryBlueColor}" FontWeight="Bold" FontSize="20" VerticalAlignment="Center" HorizontalContentAlignment="Left" HorizontalAlignment="Left" Margin="14 0 0 0" />
+                    </StackPanel>
+                    <!--menu-->
+                    <ToggleButton x:Name="Btn_Menu" HorizontalAlignment="Right" BorderThickness="0" Background="Transparent" VerticalAlignment="Center" Style="{StaticResource MenuIconStyle}" Margin="0 0 15 0" >
+                        <ToggleButton.Triggers>
+                            <EventTrigger RoutedEvent="ToggleButton.Unchecked">
+                                <BeginStoryboard>
+                                    <Storyboard x:Name="HidStackPanel">
+                                        <DoubleAnimation Storyboard.TargetName="gridMenu" Storyboard.TargetProperty="Width" BeginTime="0:0:0" From="300" To="80" Duration="0:0:0.3">
+                                            
+                                        </DoubleAnimation>
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </EventTrigger>
+                            <EventTrigger RoutedEvent="ToggleButton.Checked">
+                                <BeginStoryboard>
+                                    <Storyboard x:Name="showStackPanel">
+                                        <DoubleAnimation Storyboard.TargetName="gridMenu" Storyboard.TargetProperty="Width" BeginTime="0:0:0" From="80" To="300" Duration="0:0:0.3" >
+                                        </DoubleAnimation>
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </EventTrigger>
+                        </ToggleButton.Triggers>
+                    </ToggleButton>
+
+                </Grid>
+                
+            </Border>
+            
+        </Grid>
+    </Border>
 </Window>
